@@ -1,9 +1,7 @@
-/////////////////////////////////////////////////////////////////////////////////
 CREDIT WHERE ITS DUE
 Thanks to earlpilhower for making the Raspberry Pi Pico core for Arduino IDE
 Go check out his repo on it!
 https://github.com/earlephilhower/arduino-pico 
-////////////////////////////////////////////////////////////////////////////////
 
 This is a rickroller I made in Arduino IDE using an Raspberry Pi Pico and a SSD1306 screen. 
 
