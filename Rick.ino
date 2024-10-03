@@ -105,71 +105,71 @@ const unsigned char rick [] PROGMEM = {
 
 void loop() {
   if (BOOTSEL) {
-    display.clearDisplay();
-    display.setTextSize(1);
+    display.clearDisplay(); // Clears the display
+    display.setTextSize(1); // The this and the following 3 lines of code are initalizing the screen. Getting ready for display
     display.setTextColor(WHITE);
     display.setCursor(0, 0);
     display.clearDisplay();
-    display.println("Rick Rolling.");
-    display.display(); 
-    delay(500);
+    display.println("Rick Rolling."); // Displays the text "Rick rolling" on the OLED display
+    display.display();
+    delay(DELAY_ONE); // Change me to adjust the delay! Waits 500ms to start typing
     Keyboard.consumerRelease();
-    Keyboard.press(KEY_LEFT_GUI);
+    Keyboard.press(KEY_LEFT_GUI); // Presses [⊞] and [s] at the same time to open the search menu
     Keyboard.print("s");
-    Keyboard.releaseAll();
-    display.clearDisplay();
+    Keyboard.releaseAll(); // Releases all the keys
+    display.clearDisplay(); 
     display.setCursor(0, 0);
     display.println("Rick Rolling..");
     display.display();
-    delay(500);
-    Keyboard.print("Chrome");
-    delay(500);
+    delay(500); // Change me to adjust the delay!
+    Keyboard.print("Edge"); // Types in Edge as it is built into all Windows machines (our target) because the target computer might not have Chrome installed
+    delay(500); // Change me to adjust the delay!
     display.clearDisplay();
     display.setCursor(0, 0);
     display.println("Rick Rolling...");
     display.display();
     Keyboard.println();
-    Keyboard.press(KEY_ESC);
-    delay(500);
+    Keyboard.press(KEY_ESC); // Presses the ESC key.
+    delay(500); // Change me to adjust the delay!
     Keyboard.releaseAll();
     display.clearDisplay();
     display.setCursor(0, 0);
     display.println("Rick Rolling.");
     display.display();
-    delay(12000);
-    Keyboard.press(KEY_LEFT_CTRL);
+    delay(12000); // Change me to adjust the delay! Waits 12 seconds for Edge to load
+    Keyboard.press(KEY_LEFT_CTRL); // Presses [Ctrl] and [1] to help make sure it's on the right tab
     Keyboard.print("l");
     display.clearDisplay();
     display.setCursor(0, 0);
     display.println("Rick Rolling..");
     display.display();
-    delay(500);
+    delay(500); // Change me to adjust the delay!
     Keyboard.releaseAll();
-    delay(500);
+    delay(500); // Change me to adjust the delay!
     display.clearDisplay();
     display.setCursor(0, 0);
     display.println("Rick Rolling...");
     display.display();
-    Keyboard.write(0xD4);
-    delay(500);
-    Keyboard.print("https://www.youtube.com/watch?v=2qBlE2-WL60");
-    delay(500);
+    Keyboard.write(0xD4); // I don't know what this does. Run the code and see!
+    delay(500); // Change me to adjust the delay!
+    Keyboard.print("https://www.youtube.com/watch?v=2qBlE2-WL60"); // Types in the URL to the youtube video.
+    delay(500); // Change me to adjust the delay!
     display.clearDisplay();
     display.setCursor(0, 0);
     display.println("Rick Rolling.");
     display.display();
     Keyboard.println();
-    delay(7000);
+    delay(7000); // Change me to adjust the delay! Waits 7 seconds for the video to load and then presses [F] to fullscreen the video.
     Keyboard.print("f");
     Keyboard.consumerRelease();
     display.clearDisplay();
     display.setCursor(0,0);
     display.println("Rickrolled!");
     display.display();
-    delay(1500);
+    delay(1500); // Change me to adjust the delay!
     display.setCursor(0, 0);
     display.clearDisplay();
-    display.drawBitmap(0, 0, rick, 128, 64, 1);    
+    display.drawBitmap(0, 0, rick, 128, 64, 1); // Draws Rick Astley on the OLED Display.
     display.display();
       while (BOOTSEL);
   }
